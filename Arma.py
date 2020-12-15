@@ -1,6 +1,3 @@
-from Tipo import Tipo
-from Rareza import Rareza
-from Coleccion import Coleccion
 from Estado import Estado
 
 class Arma(object):
@@ -34,7 +31,7 @@ class Arma(object):
         else:
             print("E: el float debe ser mayor que 0.0 y menor o igual a 1.0")
 
-#"""PROBADOR
+"""PROBADOR
 armas=[]
 a=Arma(Tipo.AUG,"Sweeper",Rareza.Consumidor,
             Coleccion.Inferno2018,0.1,0.02)
@@ -42,4 +39,4 @@ print(a.tipo.name,a.nombre,a.rareza.name,a.coleccion.name,
       a.estado.name,"(",a.Float,")",a.precio,"€")
 #print(a.tipo,a.nombre,a.rareza,a.estado.value,"debe ser 0.0...")
 #a=Arma(Tipo.MP7)
-#"""
+"""
