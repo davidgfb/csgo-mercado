@@ -1,7 +1,7 @@
 class Intercambio(object):    
     def __init__(self,armas):
         def coste(armas):
-            c=0
+            c=0.0
 
             for a in armas:
                 c+=a.precio
@@ -30,7 +30,7 @@ class Intercambio(object):
         else:
             print("E: debe haber 10 armas para el intercambio")    
 
-#"""PROBADOR
+"""PROBADOR
 from Arma import Arma
 from Rareza import Rareza
 from Coleccion import Coleccion
@@ -53,7 +53,7 @@ print("Coste:",i.coste,"€\nRecibe:\n",
       "\nBeneficio:", b, "€",
       "\nPorcentaje:", p, "%",)
 
-"""
+
 for a in i.armas:
     
     repetidas=[]
@@ -63,5 +63,47 @@ for a in i.armas:
     
     print(a.tipo.name,a.nombre,a.rareza.name,a.coleccion.name,
           a.estado.name,"(",a.Float,")",a.precio,"€")
-""" 
-#"""
+
+"""
+
+def beneficio(precios,probs): #esperanza
+    b=0.0
+
+    for i in range(len(precios)):
+        prob=probs[i]
+        precio=precios[i]
+        b+=prob*precio
+
+    return b
+           
+"""PROBADOR
+"""
+precios=[0.74,0.54,0.72,
+         1.04,0.61,0.62]
+"""
+probs=[0.2333,0.2333,0.2333,
+       0.1,0.1,0.1]
+"""
+probs=[7/30,7/30,7/30,
+       0.1,0.1,0.1]
+print("beneficio:",beneficio(precios,probs),"debe ser 0.69")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
